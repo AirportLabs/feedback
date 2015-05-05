@@ -1,0 +1,13 @@
+<ion-view view-title="MWAA Feedback">
+  <ion-content>
+
+    <h3 class="custom">View feedback from ...</h3>
+
+    <ul class="list">
+      <a class="item" ng-repeat="feedback in feedbacks" href="#/tab/user/{{feedback.firstname}}_{{feedback.lastname}}">
+        {{feedback.firstname}} {{feedback.lastname}}
+      </a>
+    </ul>
+
+  </ion-content>
+</ion-view>
