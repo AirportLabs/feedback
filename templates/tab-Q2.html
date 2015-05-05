@@ -1,0 +1,33 @@
+<ion-view view-title="MWAA Feedback">
+  <ion-content>
+
+    <div class="padding">
+      <h3 class="custom">Are you satisfied with the new website approach and design?</h3>
+    </div>
+
+    <div class="list list-inset">
+
+      <label class="item item-radio">
+        <input type="radio" name="group" value="YES" ng-model="formData.q2">
+        <div class="item-content">
+          Yes
+        </div>
+        <i class="radio-icon ion-checkmark"></i>
+      </label>
+
+      <label class="item item-radio">
+        <input type="radio" name="group" value="NO" ng-model="formData.q2">
+        <div class="item-content">
+          No
+        </div>
+        <i class="radio-icon ion-checkmark"></i>
+      </label>
+
+    </div>
+
+    <div class="padding">
+      <a class="button button-block button-positive" ui-sref="tab.q3">Next</a>
+    </div>
+
+  </ion-content>
+</ion-view>
