@@ -5,19 +5,17 @@ angular.module('starter.controllers', [])
   $rootScope.formData = {};
 })
 
-.controller('GiveCtrl', function($scope) {
-  // stuff goes here
-})
-
-.controller('register', function($scope, $stateParams, $location) {
-  $scope.registerUser = function() {
+.controller('Q1', function($scope, $stateParams, $location) {
+  $scope.submitAnswer = function() {
     console.log($scope.formData);
-    $location.path("/tab/q1");
+    if ($scope.formData.q1 == "arriving") {
+      console.log('Q1 == arriving');
+      $location.path("/tab/q2");
+    } else {
+      console.log('Q1 == arriving');
+      $location.path("/tab/XXX");
+    };
   };
-})
-
-.controller('Q1', function($scope) {
-  console.log($scope.formData);
 })
 
 .controller('Q2', function($scope) {
@@ -40,7 +38,6 @@ angular.module('starter.controllers', [])
   console.log($scope.formData);
   $scope.submitAnswer = function() {
     console.log($scope.formData);
-    alert($scope.formData.q6);
     if ($scope.formData.q6 == "YES") {
       console.log('Q6 == YES');
       $location.path("/tab/q6yes");
@@ -74,7 +71,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ViewCtrl', function($scope) {
+.controller('AboutCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };

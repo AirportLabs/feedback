@@ -40,26 +40,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // STATES FOR GIVING FEEDBACK
 
-  .state('tab.give', {
-    url: '/give',
-    views: {
-      'tab-give': {
-        templateUrl: 'templates/tab-give.html',
-        controller: 'GiveCtrl'
-      }
-    }
-  })
-
-  .state('tab.register', {
-    url: '/register',
-    views: {
-      'tab-give': {
-        templateUrl: 'templates/tab-register.html',
-        controller: 'register'
-      }
-    }
-  })
-
   .state('tab.q1', {
     url: '/q1',
     views: {
@@ -159,14 +139,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  // STATES FOR VIEWING FEEDBACK
+  // STATES FOR ABOUT AIRPORT
 
-  .state('tab.view', {
-    url: '/view',
+  .state('tab.about', {
+    url: '/about',
     views: {
-      'tab-view': {
-        templateUrl: 'templates/tab-view.html',
-        controller: 'ViewCtrl'
+      'tab-about': {
+        templateUrl: 'templates/tab-about.html',
+        controller: 'AboutCtrl'
       }
     }
   })
@@ -192,6 +172,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/give');
+  $urlRouterProvider.otherwise('/tab/q1');
 
 });

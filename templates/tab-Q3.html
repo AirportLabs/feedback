@@ -2,13 +2,13 @@
   <ion-content>
 
     <div class="padding">
-      <h3 class="custom">A core component of the new website is to improve operational efficiency by consolidating multiple websites into a single tool -- one that’s focused on enhancing our relationship with our customers and other stakeholders. Was that successfully communicated?</h3>
+      <h3 class="custom">Do you know your flight number?</h3>
     </div>
 
     <div class="list list-inset">
 
       <label class="item item-radio">
-        <input type="radio" name="group" value="YES" ng-model="formData.q3">
+        <input type="radio" name="group" value="yes" ng-model="formData.q3">
         <div class="item-content">
           Yes
         </div>
@@ -16,7 +16,7 @@
       </label>
 
       <label class="item item-radio">
-        <input type="radio" name="group" value="NO" ng-model="formData.q3">
+        <input type="radio" name="group" value="no" ng-model="formData.q3">
         <div class="item-content">
           No
         </div>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="padding">
-      <a class="button button-block button-positive" ui-sref="tab.q4">Next</a>
+      <a class="button button-block button-positive" ng-click="submitAnswer()">Next</a>
     </div>
 
   </ion-content>

@@ -1,24 +1,26 @@
-<ion-view view-title="MWAA Feedback">
+<ion-view view-title="Airport Feedback">
   <ion-content>
 
     <div class="padding">
-      <h3 class="custom">Do you feel the new website will reflect a positive and fresh approach for MWAA?</h3>
+      <h3 class="custom">Are you departing or arriving into Reagan National Airport?</h3>
     </div>
 
     <div class="list list-inset">
 
       <label class="item item-radio">
-        <input type="radio" name="group" value="YES" ng-model="formData.q1">
+        <input type="radio" name="group" value="arriving" ng-model="formData.q1">
         <div class="item-content">
-          Yes
+          Arriving
+          <!-- <small><i>(flying out of Reagan National Airport)</i></small> -->
         </div>
         <i class="radio-icon ion-checkmark"></i>
       </label>
 
       <label class="item item-radio">
-        <input type="radio" name="group" value="NO" ng-model="formData.q1">
+        <input type="radio" name="group" value="departing" ng-model="formData.q1">
         <div class="item-content">
-          No
+          Departing
+          <!-- <small><i>(flying into Reagan National Airport)</i></small> -->
         </div>
         <i class="radio-icon ion-checkmark"></i>
       </label>
@@ -26,8 +28,7 @@
     </div>
 
     <div class="padding">
-      <!-- <a class="button button-block button-positive" ng-click="submitAnswer(answer)">Next</a> -->
-      <a class="button button-block button-positive" ui-sref="tab.q2">Next</a>
+      <a class="button button-block button-positive" ng-click="submitAnswer()">Next</a>
     </div>
 
   </ion-content>
