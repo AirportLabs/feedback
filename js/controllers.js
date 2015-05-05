@@ -22,8 +22,15 @@ angular.module('starter.controllers', [])
   console.log($scope.formData);
 })
 
-.controller('Q3', function($scope) {
-  console.log($scope.formData);
+.controller('Q3', function($scope, $stateParams, $location) {
+  $scope.submitAnswer = function() {
+    console.log($scope.formData);
+    if ($scope.formData.q3 == "yes") {
+      $location.path("/tab/q4");
+    } else {
+      $location.path("/tab/XXX");
+    };
+  };
 })
 
 .controller('Q4', function($scope) {
