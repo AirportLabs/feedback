@@ -100,16 +100,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.q6yes', {
-    url: '/q6yes',
-    views: {
-      'tab-give': {
-        templateUrl: 'templates/tab-q6yes.html',
-        controller: 'Q6yes'
-      }
-    }
-  })
-
   .state('tab.q7', {
     url: '/q7',
     views: {
@@ -120,12 +110,62 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.q7yes', {
-    url: '/q7yes',
+  .state('tab.q8', {
+    url: '/q8',
     views: {
       'tab-give': {
-        templateUrl: 'templates/tab-q7yes.html',
-        controller: 'Q7yes'
+        templateUrl: 'templates/tab-Q8.html',
+        controller: 'Q8'
+      }
+    }
+  })
+
+  .state('tab.q9', {
+    url: '/q9',
+    views: {
+      'tab-give': {
+        templateUrl: 'templates/tab-Q9.html',
+        controller: 'Q9'
+      }
+    }
+  })
+
+  .state('tab.q10', {
+    url: '/q10',
+    views: {
+      'tab-give': {
+        templateUrl: 'templates/tab-Q10.html',
+        controller: 'Q10'
+      }
+    }
+  })
+
+  .state('tab.q11', {
+    url: '/q11',
+    views: {
+      'tab-give': {
+        templateUrl: 'templates/tab-Q11.html',
+        controller: 'Q11'
+      }
+    }
+  })
+
+  .state('tab.q12', {
+    url: '/q12',
+    views: {
+      'tab-give': {
+        templateUrl: 'templates/tab-Q12.html',
+        controller: 'Q12'
+      }
+    }
+  })
+
+  .state('tab.q13', {
+    url: '/q13',
+    views: {
+      'tab-give': {
+        templateUrl: 'templates/tab-Q13.html',
+        controller: 'Q13'
       }
     }
   })
@@ -147,26 +187,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-about': {
         templateUrl: 'templates/tab-about.html',
         controller: 'AboutCtrl'
-      }
-    }
-  })
-
-  .state('tab.users', {
-    url: '/users',
-    views: {
-      'tab-view': {
-        templateUrl: 'templates/tab-users.html',
-        controller: 'users'
-      }
-    }
-  })
-
-  .state('tab.user', {
-    url: '/user/:userID',
-    views: {
-      'tab-view': {
-        templateUrl: 'templates/tab-user.html',
-        controller: 'user'
       }
     }
   });

@@ -22,12 +22,31 @@ angular.module('starter.controllers', [])
   console.log($scope.formData);
 })
 
-.controller('Q3', function($scope) {
-  console.log($scope.formData);
+.controller('Q3', function($scope, $stateParams, $location) {
+  $scope.submitAnswer = function() {
+    console.log($scope.formData);
+    if ($scope.formData.q3 == "yes") {
+      $location.path("/tab/q4");
+    } else {
+      $location.path("/tab/XXX");
+    };
+  };
 })
 
-.controller('Q4', function($scope) {
-  console.log($scope.formData);
+.controller('Q4', function($scope, $stateParams, $location) {
+  $scope.submitAnswer = function() {
+    console.log($scope.formData);
+    // get a random number between 1 and 3
+    var randomNum = Math.floor((Math.random() * 3) + 1);
+    console.log('randomNum: ' + randomNum);
+    if (randomNum === 1) {
+      $location.path("/tab/q5");
+    } else if (randomNum === 2) {
+      $location.path("/tab/q8");
+    } else if (randomNum === 3) {
+      $location.path("/tab/q11");
+    };
+  };
 })
 
 .controller('Q5', function($scope) {
@@ -47,40 +66,44 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('Q6yes', function($scope) {
-  console.log($scope.formData);
-})
-
 .controller('Q7', function($scope, $stateParams, $location) {
   console.log($scope.formData);
-  $scope.submitAnswer = function() {
-    if ($scope.formData.q7 === "YES") {
-      $location.path("/tab/q7yes");
-    } else {
-      $location.path("/tab/done");
-    };
-  };
 })
 
-.controller('Q7yes', function($scope, $stateParams, $location) {
+.controller('Q8', function($scope, $stateParams, $location) {
   console.log($scope.formData);
-  $scope.submitAnswer = function() {
-    $location.path("/tab/done");
-    // $ionicHistory.clearHistory();
-  };
-
 })
+
+.controller('Q9', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+})
+
+.controller('Q10', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+})
+
+.controller('Q11', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+})
+
+.controller('Q12', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+})
+
+.controller('Q13', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+})
+
+// .controller('Q7yes', function($scope, $stateParams, $location) {
+//   console.log($scope.formData);
+//   $scope.submitAnswer = function() {
+//     $location.path("/tab/done");
+//     // $ionicHistory.clearHistory();
+//   };
+// })
 
 .controller('AboutCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };
-})
-
-.controller('users', function($scope) {
-
-})
-
-.controller('user', function($scope, $stateParams) {
-  console.log($stateParams.userID);
 });
