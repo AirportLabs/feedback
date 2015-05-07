@@ -37,18 +37,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('Q4', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
   $scope.submitAnswer = function() {
-    console.log($scope.formData);
-    // get a random number between 1 and 3
-    var randomNum = Math.floor((Math.random() * 3) + 1);
+    // get a random whole number between 5 and 13
+    var randomNum = Math.floor((Math.random() * 9) + 5);
     console.log('randomNum: ' + randomNum);
-    if (randomNum === 1) {
-      $location.path("/tab/q5");
-    } else if (randomNum === 2) {
-      $location.path("/tab/q8");
-    } else if (randomNum === 3) {
-      $location.path("/tab/q11");
-    };
+    $location.path("/tab/q" + randomNum);
   };
 })
 
@@ -58,15 +52,6 @@ angular.module('starter.controllers', [])
 
 .controller('Q6', function($scope, $stateParams, $location) {
   console.log($scope.formData);
-  $scope.submitAnswer = function() {
-    console.log($scope.formData);
-    if ($scope.formData.q6 == "YES") {
-      console.log('Q6 == YES');
-      $location.path("/tab/q6yes");
-    } else {
-      $location.path("/tab/q7");
-    };
-  };
 })
 
 .controller('Q7', function($scope, $stateParams, $location) {
@@ -110,7 +95,11 @@ angular.module('starter.controllers', [])
     step: 1
   };
   $scope.submitAnswer = function() {
-    console.log('yo');
+    console.log('saving departure time to JSON');
+    // get a random whole number between 5 and 13
+    var randomNum = Math.floor((Math.random() * 9) + 5);
+    console.log('randomNum: ' + randomNum);
+    $location.path("/tab/q" + randomNum);
   };
 })
 
