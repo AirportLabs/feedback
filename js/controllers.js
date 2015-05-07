@@ -8,12 +8,15 @@ angular.module('starter.controllers', [])
 .controller('Q1', function($scope, $stateParams, $location) {
   $scope.submitAnswer = function() {
     console.log($scope.formData);
-    if ($scope.formData.q1 == "arriving") {
-      console.log('Q1 == arriving');
+    if ($scope.formData.q1 == "departing") {
+      console.log('Q1 == departing');
       $location.path("/tab/q2");
     } else {
       console.log('Q1 == arriving');
-      $location.path("/tab/XXX");
+      // get a random whole number between 5 and 13
+      var randomNum = Math.floor((Math.random() * 9) + 5);
+      console.log('randomNum: ' + randomNum);
+      $location.path("/tab/q" + randomNum);
     };
   };
 })
@@ -28,7 +31,7 @@ angular.module('starter.controllers', [])
     if ($scope.formData.q3 == "yes") {
       $location.path("/tab/q4");
     } else {
-      $location.path("/tab/XXX");
+      $location.path("/tab/q26");
     };
   };
 })
@@ -92,6 +95,23 @@ angular.module('starter.controllers', [])
 
 .controller('Q13', function($scope, $stateParams, $location) {
   console.log($scope.formData);
+})
+
+.controller('Q26', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+})
+
+.controller('Q27', function($scope, $stateParams, $location) {
+  console.log($scope.formData);
+  // ref: https://github.com/rajeshwarpatlolla/ionic-timepicker
+  $scope.slots = {
+    epochTime: 12600,
+    format: 12,
+    step: 1
+  };
+  $scope.submitAnswer = function() {
+    console.log('yo');
+  };
 })
 
 // .controller('Q7yes', function($scope, $stateParams, $location) {
