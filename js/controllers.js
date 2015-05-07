@@ -103,10 +103,11 @@ angular.module('starter.controllers', [])
 
 .controller('Q27', function($scope, $stateParams, $location) {
   console.log($scope.formData);
+  // ref: https://github.com/rajeshwarpatlolla/ionic-timepicker
   $scope.slots = {
     epochTime: 12600,
     format: 12,
-    step: 15
+    step: 1
   };
   $scope.submitAnswer = function() {
     console.log('yo');
